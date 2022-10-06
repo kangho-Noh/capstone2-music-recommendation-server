@@ -50,10 +50,10 @@ class Recommend:
         s2v_result = result[:len(result)//2]
         cbf_result = result[len(result)//2:]
 
-        # analysis = self.spotifyManager.get_audio_analysis_playlist(
-        #     seed, cbf_result, category)
-        # cbf_result = self.content_based_recommendation(
-        #     cbf_result, category, analysis)
+        analysis = self.spotifyManager.get_audio_analysis_playlist(
+            seed, cbf_result, category)
+        cbf_result = self.content_based_recommendation(
+            cbf_result, category, analysis)
 
         result = random.sample(s2v_result, len(
             s2v_result)//2) + random.sample(cbf_result, len(cbf_result)//2)
@@ -81,10 +81,10 @@ class Recommend:
         s2v_result = result[:len(result)//2]
         cbf_result = result[len(result)//2:]
 
-        # analysis = self.spotifyManager.get_audio_analysis_single_song(
-        #     seed, cbf_result, category)
-        # cbf_result = self.content_based_recommendation(
-        #     cbf_result, category, analysis)
+        analysis = self.spotifyManager.get_audio_analysis_single_song(
+            seed, cbf_result, category)
+        cbf_result = self.content_based_recommendation(
+            cbf_result, category, analysis)
 
         result = random.sample(s2v_result, len(
             s2v_result)//2) + random.sample(cbf_result, len(cbf_result)//2)

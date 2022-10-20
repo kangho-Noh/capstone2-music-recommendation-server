@@ -4,6 +4,7 @@ import recommendation.recommendManager as recommendManager
 
 app = Flask(__name__)
 test_genre = 'test'
+recommend = recommendManager.Recommend('flask/recommendation')
 
 
 # recommend/playlist
@@ -42,8 +43,3 @@ def get_recommend_by_song():
     )
     print("[response: /recommend/song]   ", result)
     return response
-
-
-if __name__ == "__main__":
-    recommend = recommendManager.Recommend('flask/recommendation')
-    app.run()
